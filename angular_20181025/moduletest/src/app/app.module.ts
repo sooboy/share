@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 
 // 内部模块
 import {NewsModule} from './news/news.module';
-import { IndexComponent } from './index/index.component'
+import { IndexComponent } from './index/index.component';
+import { AboutComponent } from './about/about.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent
+    IndexComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
