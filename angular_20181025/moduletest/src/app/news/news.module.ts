@@ -4,6 +4,8 @@ import { LiveComponent } from './live/live.component';
 import { FocusComponent } from './focus/focus.component';
 import { NewsPipe } from './news.pipe';
 import { SpotComponent } from './spot/spot.component';
+import { SpotaComponent } from './spot/spota/spota.component';
+import { SpotbComponent } from './spot/spotb/spotb.component';
 
 @NgModule({
   imports: [
@@ -12,8 +14,10 @@ import { SpotComponent } from './spot/spot.component';
   exports:[
     LiveComponent,
     FocusComponent,
-    SpotComponent
+    SpotComponent,
+    SpotaComponent,
+    SpotbComponent
   ],
-  declarations: [LiveComponent, FocusComponent, NewsPipe, SpotComponent]
+  declarations: [LiveComponent, FocusComponent, NewsPipe, SpotComponent, SpotaComponent, SpotbComponent]
 })
 export class NewsModule { }

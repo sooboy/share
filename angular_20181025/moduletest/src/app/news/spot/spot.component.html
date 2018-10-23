@@ -1,3 +1,9 @@
-<p>
-  spot works!
-</p>
+<div>
+    <ul>
+       <li *ngFor="let spot of spots">
+         <app-spota *ngIf="isPremius(spot.spot)" [spot]="spot.spot"></app-spota>
+         <app-spotb *ngIf="!isPremius(spot.spot)" [spot]="spot.spot"></app-spotb>
+         <app-spot  *ngIf="spot.children" [spots]="spot.children"></app-spot>
+      </li>
+    </ul>
+</div>
