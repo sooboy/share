@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // 内部模块
-import {NewsModule} from './news/news.module';
+import { NewsModule } from './news/news.module';
 import { IndexComponent } from './index/index.component';
-import { AboutComponent } from './about/about.component'
+import { AboutComponent } from './about/about.component';
+
+// service
+import { SpotsService } from './spots.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,7 @@ import { AboutComponent } from './about/about.component'
     BrowserModule,
     NewsModule
   ],
-  providers: [],
+  providers: [SpotsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
