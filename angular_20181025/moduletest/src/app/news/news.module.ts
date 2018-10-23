@@ -11,7 +11,8 @@ import { SpotComponent } from './spot/spot.component';
   ],
   exports:[
     LiveComponent,
-    FocusComponent
+    FocusComponent,
+    SpotComponent
   ],
   declarations: [LiveComponent, FocusComponent, NewsPipe, SpotComponent]
 })
