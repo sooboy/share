@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LiveComponent } from './live/live.component';
 import { FocusComponent } from './focus/focus.component';
 import { NewsPipe } from './news.pipe';
+import { SpotComponent } from './spot/spot.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { NewsPipe } from './news.pipe';
     LiveComponent,
     FocusComponent
   ],
-  declarations: [LiveComponent, FocusComponent, NewsPipe]
+  declarations: [LiveComponent, FocusComponent, NewsPipe, SpotComponent]
 })
 export class NewsModule { }
