@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { SpoterList } from '../helper/interface';
 
 @Injectable()
-export class SpotsService {
-   name:string = "APP"
+export class Spots2Service {
+   name:string = "News"
   constructor() { 
    
   }

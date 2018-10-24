@@ -21,7 +21,9 @@ import { SpotsService } from './spots.service';
     BrowserModule,
     NewsModule
   ],
-  providers: [SpotsService],
+  providers: [
+    // {provide:SpotsService,useClass:SpotsService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

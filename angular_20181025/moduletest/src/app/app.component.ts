@@ -14,6 +14,7 @@ export class AppComponent {
   spots:SpoterList[] 
 
   constructor(spots:SpotsService){
+    console.log("APP name :",spots.name)
     this.spots =spots.getSpots()
   }
 
