@@ -24,7 +24,7 @@ class Spot extends React.Component<ISpotProp,{}>{
          const components:any =[]
          for (const item of spots){
              const element = (
-                 <li>
+                 <li key={item.spot.name}>
                      {this.spotItem(item.spot)}
                      {item.children&&this.spotChildren(item.children)}
                  </li>
