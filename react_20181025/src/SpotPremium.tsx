@@ -1,15 +1,17 @@
 import * as React from 'react';
 
-import { Spoter } from './helper/interface';
+import { ISpoter } from './helper/interface';
 
-interface SpotProp{
-    spot:Spoter
+import "./SpotPremium.css"
+
+interface ISpotProp{
+    spot:ISpoter
 }
 
-class SpotPremium extends React.Component<SpotProp,{}>{
+class SpotPremium extends React.Component<ISpotProp,{}>{
   public render(){
       return (
-           <p> {this.props.spot.name} 的升贴水是： {this.props.spot.price}</p>
+           <p className="Item"> {this.props.spot.name} 的升贴水是： {this.props.spot.price}</p>
       )
   }
 }

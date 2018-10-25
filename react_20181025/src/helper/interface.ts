@@ -1,14 +1,14 @@
-interface Spoter{
+interface ISpoter{
     price:number | string
     name:string
 }
 
-interface SpoterList{
-    spot:Spoter,
-    children?:SpoterList[]
+interface ISpoterList{
+    spot:ISpoter,
+    children?:ISpoterList[]
 }
 
 export {
-    Spoter,
-    SpoterList
+    ISpoter,
+    ISpoterList
 }

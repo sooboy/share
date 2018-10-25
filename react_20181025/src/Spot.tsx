@@ -1,30 +1,29 @@
 import * as React from 'react';
 
-import { SpoterList,Spoter } from './helper/interface';
+import { ISpoter,ISpoterList } from './helper/interface';
 
 import  SpotPremium  from './SpotPremium'
 import  SpotPrice  from './SpotPrice'
 
-interface SpotProp{
-    spots:SpoterList[]
+interface ISpotProp{
+    spots:ISpoterList[]
 }
 
-class Spot extends React.Component<SpotProp,{}>{
+class Spot extends React.Component<ISpotProp,{}>{
 
 
-    public spotItem(spot:Spoter){
+    public spotItem(spot:ISpoter){
             if ( typeof spot.price === "string"){
-                return <SpotPremium spot={spot}></SpotPremium>  
+                return <SpotPremium spot={spot} />
             }else{
-                return  <SpotPrice spot={spot}></SpotPrice> 
+                return  <SpotPrice spot={spot} />
             }
     }
 
-    public spotChildren(spots:SpoterList[]){
-         let components:any =[]
-         for (let i=0;i<spots.length;i++){
-             let item = spots[i];
-             let element = (
+    public spotChildren(spots:ISpoterList[]){
+         const components:any =[]
+         for (const item of spots){
+             const element = (
                  <li>
                      {this.spotItem(item.spot)}
                      {item.children&&this.spotChildren(item.children)}
